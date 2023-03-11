@@ -31,10 +31,10 @@ class AdminUserAccountControllerTest {
         // given
 
         // when
-        mvc.perform(get("/admin/member"))
+        mvc.perform(get("/admin/members"))
            .andExpect(status().isOk())
            .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-           .andExpect(view().name("admin/member"));
+           .andExpect(view().name("admin/members"));
         // then
     }
 }
