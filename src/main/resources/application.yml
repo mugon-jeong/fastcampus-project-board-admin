@@ -60,7 +60,7 @@ spring:
     activate:
       on-profile: test
   datasource:
-    url: jdbc:h2:mem:fastcampus;mode=mysql
+    url: jdbc:h2:mem:admin;mode=mysql
     driver-class-name: org.h2.Driver
   sql:
     init:
