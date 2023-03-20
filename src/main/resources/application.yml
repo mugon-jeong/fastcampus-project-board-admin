@@ -9,6 +9,7 @@ logging:
     com.fastcampus.projectboardadmin: debug # 여기서 발생하는 모든 로그는 debug 레벨로 보겠다.
     org.springframework.web.servlet: debug # response, request 로그
     org.hibernate.type.descriptor.sql.BasicBinder: trace # 쿼리 로그에서 바인딩 파라미터를 보기위해 설정
+    org.springframework.web.client.RestTemplate: debug # RestTemplate에서 발생하는 response, request log 관찰 가능
 server.port: 8081
 spring:
   devtools:
