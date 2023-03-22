@@ -6,6 +6,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import com.fastcampus.projectboardadmin.config.SecurityConfig;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,22 +20,22 @@ import org.springframework.test.web.servlet.MockMvc;
 @WebMvcTest(AdminUserAccountController.class)
 class AdminUserAccountControllerTest {
 
-    private final MockMvc mvc;
+	private final MockMvc mvc;
 
-    public AdminUserAccountControllerTest(@Autowired MockMvc mvc) {
-        this.mvc = mvc;
-    }
+	public AdminUserAccountControllerTest(@Autowired MockMvc mvc) {
+		this.mvc = mvc;
+	}
 
-    @DisplayName("[view][GET] 어드민 회원 페이지 - 정상 호출")
-    @Test
-    void givenNothing_whenRequestingAdminUserAccountView_thenReturn() throws Exception {
-        // given
+	@DisplayName("[view][GET] 어드민 회원 페이지 - 정상 호출")
+	@Test
+	void givenNothing_whenRequestingAdminUserAccountView_thenReturn() throws Exception {
+		// given
 
-        // when
-        mvc.perform(get("/admin/members"))
-           .andExpect(status().isOk())
-           .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-           .andExpect(view().name("admin/members"));
-        // then
-    }
+		// when
+		mvc.perform(get("/admin/members"))
+			.andExpect(status().isOk())
+			.andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+			.andExpect(view().name("admin/members"));
+		// then
+	}
 }
