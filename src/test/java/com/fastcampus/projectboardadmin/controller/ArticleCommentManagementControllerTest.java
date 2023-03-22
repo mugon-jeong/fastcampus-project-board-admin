@@ -7,13 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
-
-import com.fastcampus.projectboardadmin.config.SecurityConfig;
-import com.fastcampus.projectboardadmin.domain.constant.RoleType;
-import com.fastcampus.projectboardadmin.dto.ArticleCommentDto;
-import com.fastcampus.projectboardadmin.dto.UserAccountDto;
-import com.fastcampus.projectboardadmin.service.ArticleCommentManagementService;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -24,8 +17,13 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import com.fastcampus.projectboardadmin.config.TestSecurityConfig;
+import com.fastcampus.projectboardadmin.dto.ArticleCommentDto;
+import com.fastcampus.projectboardadmin.dto.UserAccountDto;
+import com.fastcampus.projectboardadmin.service.ArticleCommentManagementService;
+
 @DisplayName("View 컨트롤러 - 댓글 관리")
-@Import(SecurityConfig.class)
+@Import(TestSecurityConfig.class)
 @WebMvcTest(ArticleCommentManagementController.class)
 class ArticleCommentManagementControllerTest {
 
