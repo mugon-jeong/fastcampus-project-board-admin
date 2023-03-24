@@ -22,7 +22,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.fastcampus.projectboardadmin.config.SecurityConfig;
-import com.fastcampus.projectboardadmin.config.TestSecurityConfig;
 import com.fastcampus.projectboardadmin.domain.constant.RoleType;
 import com.fastcampus.projectboardadmin.dto.AdminAccountDto;
 import com.fastcampus.projectboardadmin.service.AdminAccountService;
@@ -33,7 +32,7 @@ import com.fastcampus.projectboardadmin.service.AdminAccountService;
  */
 @DisplayName("View 컨트롤러 - 어드민 회원")
 @Import(SecurityConfig.class)
-@WebMvcTest(AdminUserAccountController.class)
+@WebMvcTest(AdminAccountController.class)
 class AdminUserAccountControllerTest {
 
 	private final MockMvc mvc;
